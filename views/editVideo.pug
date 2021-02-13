@@ -1,0 +1,9 @@
+extends layouts/main
+
+block content
+    .form-container
+        form(action=routes.`/videos${routes.editVideo}`, method="post") 
+            input(type="text" name="title", placeholder="제목")
+            textarea(name="description" placeholder="내용") 
+            input(type="submit" value="수정하기")
+        a.form-container__link.form-container__link--delete(href=routes.deleteVideo) 비디오 삭제하기
